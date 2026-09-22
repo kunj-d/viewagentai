@@ -1,0 +1,3 @@
+# Upload target for the BMS video-template manager
+# (application/controllers/business_panel/Video_manager.php).
+# Uploads land here, then go to S3; the folder must exist.

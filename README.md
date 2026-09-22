@@ -46,26 +46,38 @@ them with `config_item('aws_access_key')`. `database.php` reads `db_username`,
 **2. Database.** Import a dump into the database named in `db_database`. The
 schema is 144 tables; there is no migration set.
 
-**3. Web server.** Two constraints drive the vhost:
+**3. Web server.** Three constraints drive the vhost:
 
 - `config.php` sets `base_url` to `http(s)://HTTP_HOST/` with no sub-folder, so
-  the app must be served at the **root** of a host.
+  the app must answer at the **root** of the host.
 - The same file sets `assetsPath` to `base_url . 'app/assets/'`, so `/app/…`
-  must resolve to the project root as well.
+  must resolve too.
+- Several controllers build filesystem paths as
+  `$_SERVER['DOCUMENT_ROOT'] . "/app/assets/..."` (see `Images_loads_ajax.php`,
+  which feeds the editor's shape/pattern/background galleries). Point the
+  document root straight at the app folder and those resolve to `app/app/...`
+  and silently return an empty gallery.
 
-In production the document root is `public_html` with the app in `public_html/app`.
-Locally, an `Alias` reproduces that without touching any PHP:
+So the document root must be the **parent** of the app folder, exactly like
+production (`public_html`, with the app in `public_html/app`):
 
 ```apache
 <VirtualHost *:80>
     ServerName   www.viewagentai.local
     ServerAlias  *.viewagentai.local
-    DocumentRoot "/path/to/app"
-    Alias /app    "/path/to/app"
-    <Directory "/path/to/app">
+    DocumentRoot "/path/to/parent"          # NOT /path/to/parent/app
+
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} !^/app/
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-d
+    RewriteRule ^(.*)$ /app/index.php/$1 [L]
+
+    <Directory "/path/to/parent">
         AllowOverride All
         Require all granted
     </Directory>
+
     # index.php line 62 reads $_GET['index_on'] without isset(), so PHP emits a
     # notice before CodeIgniter can disable display_errors. Any output that early
     # breaks every header()/redirect in the app.
