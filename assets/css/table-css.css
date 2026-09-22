@@ -1,0 +1,72 @@
+
+    div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+            margin: 20px 0;
+            white-space: nowrap;
+            justify-content: flex-end;
+        }
+        .table {
+            --bs-table-color-type: initial;
+            --bs-table-bg-type: initial;
+            --bs-table-color-state: initial;
+            --bs-table-bg-state: initial;
+            --bs-table-color: var(--bs-body-color);
+            --bs-table-bg: var(--theme-color) !important;
+            --bs-table-border-color: var(--theme-br) !important;
+            --bs-table-accent-bg: transparent;
+            --bs-table-striped-color: var(--bs-body-color);
+            --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+            --bs-table-active-color: var(--bs-body-color);
+            --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+            --bs-table-hover-color: var(--bs-body-color);
+            --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+            width: 100%;
+            margin-bottom: 1rem;
+            vertical-align: top;
+            border-color: var(--theme-br);
+            color: var(--black-color) !important;
+        }
+        .table>:not(caption)>*>* {
+            padding: 20px 0.5rem 20px 1rem;
+            color: var(--text-light) !important;
+            background-color: var(--bs-table-bg);
+            border-bottom-width: var(--bs-border-width);
+            box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state,var(--bs-table-bg-type,var(--bs-table-accent-bg)));
+        }
+        table.dataTable thead>tr>th.sorting:before{
+            position: absolute;
+            display: block;
+            opacity: .6;
+            right: 20% ;
+            line-height: 9px;
+            font-size: .8em;
+        }
+        table.dataTable thead>tr>th.sorting:after{
+            position: absolute;
+            display: block;
+            opacity: .6;
+            right: 20%;
+            bottom: 1px;
+            line-height: 9px;
+            font-size: .8em;
+        }
+        table.dataTable {
+            clear: both;
+            margin-top: 30px !important;
+            margin-bottom: 20px !important;
+            max-width: none !important;
+            border-collapse: separate !important;
+            border-spacing: 0;
+        }
+        div.dataTables_wrapper div.dataTables_length label {
+            color: var(--text-dark);
+        }
+        div.dataTables_wrapper div.dataTables_info {
+            color: #fff;
+        }
+        .page-item.active .page-link {
+            z-index: 3;
+            color: var(--black-color);
+            background:var(--primary-color) !important;
+            border-color: #fff;
+            color: var(--white-color) !important;
+        }

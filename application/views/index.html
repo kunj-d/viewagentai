@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/anam.css">
+    <link rel="stylesheet" href="css/pnotify.custom.min.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+
+    <!-- Common files --> 
+
+    <script type='text/javascript' src="js/jquery.min.js"></script>
+    <script type='text/javascript' src="js/basic.js"></script>
+    <script type='text/javascript' src="js/pnotify.custom.min.js"></script>
+    <script type='text/javascript' src="js/bootstrap.bundle.min.js"></script> 
+    <script type='text/javascript' src="js/bootstrap-select.min.js"></script> 
+    <script type='text/javascript' src="js/script.js"></script>
+    <script src="js/angular.min.js"></script>
+    <!-- Common files End --> 
+    <!-- Custom Scrollbar File -->
+    <script type='text/javascript' src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type='text/javascript' src="js/jquery.tagsinput.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+        a.listdisabled{
+            pointer-events: none;
+            cursor: default;
+        }
+        .cke_contents{
+            height:400px !important;
+        }
+    </style>
+</head>
+<body>
+<header class="header-fixed">
+        <div class="d-flex align-items-center">
+            <div class="d-lg-none">
+                <input type="checkbox" id="side-nav-toggles">
+                <label class="hamburger side-nav-toggles" for="side-nav-toggles">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </label>
+            </div>
+            <a href="#"><img src="images/logo.png" class="img-fluid logo-height"></a>
+        </div>
+        <ul class="top-right-items">          
+            <li class="profile">
+                <div class="user-name d-none d-md-flex">Hi, John</div>
+                <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown">
+                    <img src="images/profile.png" class="img-fluid">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end animated--grow-in" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#"><i class="icon-user"></i> My Profile</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="icon-subscription"></i> Business Manage</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="icon-subscription"></i> Subscription</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="icon-subscription"></i> Tutorial</a></li>
+					<div class="dropdown-divider"></div>
+                    <li><a class="dropdown-item" href="#"><i class="icon-logout"></i> Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <!-- Sidebar Start -->
+    <div class="sidebar sidebar-show">
+        <div class="sidebar-menu mCustomScrollbar" data-mcs-theme="inset-3" id="left-nav">
+            <div class="padding">
+                <ul>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="icon-dashboard size-icon"></span>
+                            <span class="menu-title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">
+                            <span class="icon-campaign size-icon"></span>
+                            <span class="menu-title">Your VA</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#" class="nav-link">
+                            <span class="icon-vox size-icon"></span>
+                            <span class="menu-title">Custom VA</span>
+                        </a>
+                    </li>
+                    <li class="nav-item " >
+                        <a href="#" class="nav-link">
+                            <span class="icon-library size-icon"></span>
+                            <span class="menu-title">Conversation</span>
+                        </a>
+                    </li>
+					 <li class="nav-item " >
+                        <a href="#" class="nav-link">
+                            <span class="icon-whitelable size-icon"></span>
+                            <span class="menu-title">White Label</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#" class="nav-link">
+                            <span class="icon-support size-icon"></span>
+                            <span class="menu-title">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Sidebar Start End -->
+
+    <!-- Navigation Close  -->
+    <!-- <div class="close-sidemenu d-none d-lg-flex">
+        <ul>
+            <li class="nav-item">
+                <a href="#" class="nav-link side-nav-toggle">
+                    <span class="icon-open size-icon menu-title1"></span>
+                    <span class="menu-title">Close</span>
+                    <span class="menu-title2 d-none icon-close size-icon"></span>
+                    <span class="menu-title3 d-none">Open</span>
+                </a>
+            </li>
+        </ul>
+    </div> -->
+    <!-- Navigation Close End  -->
+
+    <!-- Container Start -->
+    <div class="container-wrapper container-open"><title>AI Dashboard</title>
+        <!-- Main Container Start -->
+        <div class="container-fluid container-padding">
+            <div class="row">
+                <div class="col-12">
+                    <div class="title-line">
+                        Your VA
+                    </div>
+                </div>
+                <div class="col-12 mt20 mt-md50">
+                    <div class="title-line">
+                        appointd VA
+                    </div>
+                    <hr class="hr-line">
+                </div>
+            </div>
+            <div class="row mt30 mt-md35">
+                <div class="col-md-3">
+                    <div class="appoint-wall">
+                        <div class="appoint-inner">
+                            <img src="images/john-taylor.png" alt="John Taylor" class="mx-auto d-block img-fluid">
+                            <div class="appoint-va">
+                                <i class="icon-list-edit"></i>
+                            </div>
+                            <div class="appoint-btn">
+                                <a href="#" class="appoint-link">Chat</a>
+                                <a href="#" class="dismiss-link ml10">Dismiss</a>
+                            </div>
+                        </div>
+                        <div class="mt19 appoint-title">
+                            John Taylor
+                        </div>
+                        <div class="appoint-text mt10">
+                            Business Lawyer
+                        </div>
+                        <div class="appoint-para mt10">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt20 mt-md80">
+                <div class="col-12">
+                    <div class="title-line">
+                        Available VA
+                    </div>
+                    <hr class="hr-line">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="va-selectpicker">
+                        <label for="vaexpertise" class="form-label">VA Expertise</label>
+                        <div class="dropdown bootstrap-select custom-drop dropup">
+                            <select name="tts_language" id="tts_language" class="selectpicker custom-drop" data-live-search="true" tabindex="null">
+                                <option selected>Select</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mt20 mt-md0">
+                    <div class="va-selectpicker">
+                        <label for="vatype" class="form-label">VA Type</label>
+                        <div class="dropdown bootstrap-select custom-drop dropup">
+                            <select name="tts_language" id="tts_language" class="selectpicker custom-drop" data-live-search="true" tabindex="null">
+                                <option selected>Select</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mt20 mt-md0">
+                    <div class="va-selectpicker">
+                        <label for="va" class="form-label">VA</label>
+                        <div class="dropdown bootstrap-select custom-drop dropup">
+                            <select name="tts_language" id="tts_language" class="selectpicker custom-drop" data-live-search="true" tabindex="null">
+                                <option selected>Select VA</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-4 mt30 mt-md50">
+                <div class="col">
+                    <div class="appoint-wall">
+                        <div class="appoint-inner">
+                            <img src="images/john-taylor.png" alt="John Taylor" class="mx-auto d-block img-fluid">
+                            <div class="appoint-btn">
+                                <a href="#" class="appoint-link">Appoint Now</a>
+                            </div>
+                        </div>
+                        <div class="mt19 appoint-title">
+                            John Taylor
+                        </div>
+                        <div class="appoint-text mt10">
+                            Business Lawyer
+                        </div>
+                        <div class="appoint-para mt10">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </div>
+                    </div>
+                </div>
+                <div class="col mt20 mt-md0">
+                    <div class="appoint-wall">
+                        <div class="appoint-inner">
+                            <img src="images/john-taylor.png" alt="John Taylor" class="mx-auto d-block img-fluid">
+                            <div class="appoint-btn">
+                                <a href="#" class="appoint-link">Appoint Now</a>
+                            </div>
+                        </div>
+                        <div class="mt19 appoint-title">
+                            John Taylor
+                        </div>
+                        <div class="appoint-text mt10">
+                            Business Lawyer
+                        </div>
+                        <div class="appoint-para mt10">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </div>
+                    </div>
+                </div>
+                <div class="col mt20 mt-md0">
+                    <div class="appoint-wall">
+                        <div class="appoint-inner">
+                            <img src="images/john-taylor.png" alt="John Taylor" class="mx-auto d-block img-fluid">
+                            <div class="appoint-btn">
+                                <a href="#" class="appoint-link">Appoint Now</a>
+                            </div>
+                        </div>
+                        <div class="mt19 appoint-title">
+                            John Taylor
+                        </div>
+                        <div class="appoint-text mt10">
+                            Business Lawyer
+                        </div>
+                        <div class="appoint-para mt10">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </div>
+                    </div>
+                </div>
+                <div class="col mt20 mt-md0">
+                    <div class="appoint-wall">
+                        <div class="appoint-inner">
+                            <img src="images/john-taylor.png" alt="John Taylor" class="mx-auto d-block img-fluid">
+                            <div class="appoint-btn">
+                                <a href="#" class="appoint-link">Appoint Now</a>
+                            </div>
+                        </div>
+                        <div class="mt19 appoint-title">
+                            John Taylor
+                        </div>
+                        <div class="appoint-text mt10">
+                            Business Lawyer
+                        </div>
+                        <div class="appoint-para mt10">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </div>
+                    </div>
+                </div>
+                <div class="col mt20 mt-md50">
+                    <div class="appoint-wall">
+                        <div class="appoint-inner">
+                            <img src="images/john-taylor.png" alt="John Taylor" class="mx-auto d-block img-fluid">
+                            <div class="appoint-btn">
+                                <a href="#" class="appoint-link">Appoint Now</a>
+                            </div>
+                        </div>
+                        <div class="mt19 appoint-title">
+                            John Taylor
+                        </div>
+                        <div class="appoint-text mt10">
+                            Business Lawyer
+                        </div>
+                        <div class="appoint-para mt10">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </div>
+                    </div>
+                </div>
+                <div class="col mt20 mt-md50">
+                    <div class="appoint-wall">
+                        <div class="appoint-inner">
+                            <img src="images/john-taylor.png" alt="John Taylor" class="mx-auto d-block img-fluid">
+                            <div class="appoint-btn">
+                                <a href="#" class="appoint-link">Appoint Now</a>
+                            </div>
+                        </div>
+                        <div class="mt19 appoint-title">
+                            John Taylor
+                        </div>
+                        <div class="appoint-text mt10">
+                            Business Lawyer
+                        </div>
+                        <div class="appoint-para mt10">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </div>
+                    </div>
+                </div>
+                <div class="col mt20 mt-md50">
+                    <div class="appoint-wall">
+                        <div class="appoint-inner">
+                            <img src="images/john-taylor.png" alt="John Taylor" class="mx-auto d-block img-fluid">
+                            <div class="appoint-btn">
+                                <a href="#" class="appoint-link">Appoint Now</a>
+                            </div>
+                        </div>
+                        <div class="mt19 appoint-title">
+                            John Taylor
+                        </div>
+                        <div class="appoint-text mt10">
+                            Business Lawyer
+                        </div>
+                        <div class="appoint-para mt10">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </div>
+                    </div>
+                </div>
+                <div class="col mt20 mt-md50">
+                    <div class="appoint-wall">
+                        <div class="appoint-inner">
+                            <img src="images/john-taylor.png" alt="John Taylor" class="mx-auto d-block img-fluid">
+                            <div class="appoint-btn">
+                                <a href="#" class="appoint-link">Appoint Now</a>
+                            </div>
+                        </div>
+                        <div class="mt19 appoint-title">
+                            John Taylor
+                        </div>
+                        <div class="appoint-text mt10">
+                            Business Lawyer
+                        </div>
+                        <div class="appoint-para mt10">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="horizontal-line">
+            <hr>
+        </div>
+        <div class="footer-sticky-height"></div>
+        <footer class="footer-design">
+            ©2023. All rights reserved to VirtualAssistant.
+        </footer>
+    </div>  
+    
+</body>
+</html>

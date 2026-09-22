@@ -1,0 +1,67 @@
+# ==========================================================
+#  viewagentai
+# ==========================================================
+
+# ---- Secrets: real credentials, never commit -------------
+# Copy the matching *.sample.php file and fill it in.
+application/config/secrets.php
+chat/secrets.php
+
+# ---- Loose scratch scripts sitting in the web root -------
+# Publicly reachable and they call paid APIs with live keys.
+/heygen.php
+/mahesh.php
+/testing.php
+
+# ---- User-generated media (~2.6 GB) ----------------------
+# Production serves all of this from S3 / cdn.viewagentai.com.
+assets/uploads/
+
+# ---- Dependencies that can be re-downloaded --------------
+# Each of these has its own composer.json + composer.lock,
+# so `composer install` in that folder restores it exactly.
+chat/vendor/
+application/libraries/autoresponder/aweber/vendor/
+
+# ffmpeg/ffprobe binaries (~93 MB, Linux ELF). Grab them from
+# https://ffmpeg.org/download.html for your platform instead.
+vendor/ffmpeg/
+
+# Archive of TCPDF, already extracted next to it.
+application/libraries/tcpdf/TCPDF.zip
+
+# NOTE: the top-level vendor/ IS committed on purpose. composer.json
+# only declares php>=5.3.7 and there is no composer.lock, so its 123
+# packages cannot be restored with `composer install`. Removing it
+# would break the app.
+
+# ---- Logs, cache, build junk -----------------------------
+/error_log
+application/cache/*
+!application/cache/index.html
+application/logs/*
+!application/logs/index.html
+!application/*/.htaccess
+*.log
+
+# ---- Keep the composer manifests we rely on --------------
+composer.lock
+!chat/composer.lock
+!application/libraries/autoresponder/aweber/composer.lock
+
+# ---- Local backup copies (may hold pre-scrub credentials) --
+*.bak
+*.bak-*
+*.orig-backup
+*.orig
+
+# ---- OS / editor -----------------------------------------
+.DS_Store
+Thumbs.db
+/nbproject/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache

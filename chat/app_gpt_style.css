@@ -1,0 +1,788 @@
+:root {
+    --rgba-primary-1: rgb(113, 72, 226, 0.10);
+    --rgba-primary-2: rgb(113, 72, 226, 0.2);
+    --rgba-primary-3: rgb(113, 72, 226, 0.3);
+    --rgba-primary-4: rgb(113, 72, 226, 0.4);
+    --rgba-primary-5: rgb(113, 72, 226, 0.5);
+    --rgba-primary-6: rgb(113, 72, 226, 0.6);
+    --rgba-primary-7: rgb(113, 72, 226, 0.7);
+    --rgba-primary-8: rgb(113, 72, 226, 0.8);
+    --rgba-primary-9: rgb(113, 72, 226, 0.9);
+
+    --primary-hover: #5b35c4;
+
+    --primary-color: #7148E2;
+    --primary-color2: #7148E2;
+    --primary-color3: #FF5858;
+    --primary-color4: #ec4242;
+    --secondary-color: #FDDB8A;
+    --secondary-color2: #CDD4ED;
+    --secondary-color3: #8B93B1;
+    --tertiary-color: #fff;
+    --text-primary: #ffffff;
+    --hover-color: var(--white-color);
+    --white-color: var(--white-color);
+    --black-color: var(--white-color);
+
+    --danger-color: #FF4D4D;
+    --danger-color1: #FF4A4A;
+    --primary-color5: #7148E2;
+    --primary-color6: #7148E2;
+    --primary-color7: #7148E2;
+    --grey-color: #646464;
+    --blue-gradient: #7148E2;
+    --blue-gradient1: #7148E2;
+    --theme-bg: #fff;
+    --theme-bg2: #f2f2f2;
+    --theme-color: #01010199;
+    --theme-color2: rgba(1, 1, 1, 0.60);
+    --theme-br: rgba(113, 72, 226, 0.20);
+    --theme-br2: #7148E2;
+    --theme-br3: rgba(1, 1, 1, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.radios-boxes {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-inner img {
+    min-width: 75px;
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+}
+
+.chat-user-card {
+    width: 700px;
+    min-height: 500px;
+    margin: auto;
+}
+
+.card-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 14px;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.btn {
+    padding: 10px;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.questionsapt {
+    display: block;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+#leadForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-box {
+    margin: 0 auto;
+    padding: 40px 40px;
+    background: #fff;
+    box-shadow: 0 15px 25px #fff;
+    border-radius: 10px;
+    width: fit-content;
+    width: 100%;
+}
+
+.login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: var(--white-color);
+    text-align: center;
+    font-size: 32px;
+}
+
+.login-box .user-box {
+    position: relative;
+    margin-bottom: 40px;
+
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0 10px 00px;
+    font-size: 16px;
+    color: var(--theme-color);
+    border: none;
+    border-bottom: 1px solid var(--theme-br3);
+    outline: none;
+    background: transparent;
+}
+
+select {
+    display: block;
+    width: 100%;
+    padding: .375rem 2.25rem .375rem .25rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ced4da;
+}
+
+/* .login-box .user-box label {
+                            position: absolute;
+                            top: 0;
+                            left: 10px;
+                            padding: 10px 0;
+                            font-size: 16px;
+                            color: var(--white-color);
+                            pointer-events: none;
+                            transition: .5s;
+                        } */
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+    top: -25px;
+    left: 0;
+    color: var(--white-color);
+    font-size: 16px;
+}
+
+.login-box .btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #7148E2;
+    font-size: 16px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.login-box .btn:hover {
+    background: #7148E2;
+    color: var(--white-color);
+    border-radius: 5px;
+    box-shadow: 0 0 5px #7148E2,
+        0 0 25px #7148E2,
+        0 0 50px #7148E2,
+        0 0 100px #7148E2;
+}
+
+.login-box .btn span {
+    position: absolute;
+    display: block;
+}
+
+.login-box .btn span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--text-primary));
+}
+
+.login-box .btn span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--text-primary));
+}
+
+.login-box .btn span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, var(--text-primary));
+}
+
+
+.login-box .btn span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, var(--text-primary));
+}
+
+/* KEYFRAMES */
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+/* USING KEYFRAMES */
+
+.login-box .btn span:nth-child(1) {
+    animation: btn-anim1 1s linear infinite;
+}
+
+.login-box .btn span:nth-child(2) {
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+.login-box .btn span:nth-child(3) {
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+.login-box .btn span:nth-child(4) {
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+.btn.btn1 {
+    position: relative;
+    padding: 10px 40px !important;
+    background: #0D1216;
+    color: #ffffff;
+}
+
+.btn.btn1:hover {
+    color: #ffffff;
+}
+
+
+/* =========================== Dark Style Start ==================================== */
+/* form-style-1 dark */
+
+.form-style-1.dark input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+.form-style-1.dark input[type="date"]::-webkit-calendar-picker-indicator,
+.form-style-1.dark input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.form-style-1.dark {
+    background: #1E1E1E;
+    --theme-bg: #000;
+    --white-color: #fff;
+    --theme-color: #ffffff99;
+    --theme-br3: rgba(255, 255, 255, 0.15);
+    padding: 30px 0;
+}
+
+.form-style-1.dark .question,
+.form-style-1.dark label {
+    color: #fff;
+}
+
+.form-style-1.dark .btn {
+    background: var(--text-primary);
+    color: var(--black-color);
+}
+
+.form-style-1.dark .btn:hover {
+    box-shadow: 0 0 5px var(--white-color), 0 0 25px var(--white-color), 0 0 50px var(--white-color), 0 0 100px var(--white-color);
+}
+
+.form-style-1.dark .login-box {
+    box-shadow: none;
+    background: #1E1E1E;
+}
+
+/* form-style-1 dark */
+/* =========================== Dark Style End ==================================== */
+
+
+
+
+/* =========================== Center Style Start ==================================== */
+/* form-style-1 centerform */
+
+
+.form-style-1.centerform .wrapper-parent {
+    justify-content: center;
+}
+
+.form-style-1.centerform input {
+    text-align: center;
+}
+
+.form-style-1.centerform .login-box .question,
+.form-style-1.centerform .login-box .user-box select,
+.form-style-1.centerform .login-box .user-box label {
+    text-align: center;
+    display: block;
+}
+
+.form-style-1.centerform .login-box .user-box .radios-boxes {
+    justify-content: center;
+}
+
+
+.form-style-1.centerform .btn {
+    border-radius: 50px !important;
+}
+
+.form-style-1.centerform .submit-btn-side {
+    text-align: center !important;
+}
+
+/* form-style-1 centerform */
+/* =========================== Center Style End ==================================== */
+
+
+
+/* =========================== Border Form Style Start ==================================== */
+/* form-style-1 border-form */
+
+
+.form-style-1.border-form .login-box {
+    border: 1px solid var(--theme-br3);
+    padding: 80px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-style-1.border-form .login-box input {
+    padding: 10px;
+    border-left: 2px solid var(--theme-br3);
+}
+
+.form-style-1.border-form .login-box label {
+    left: 10px;
+}
+
+.form-style-1.border-form .login-box .user-box input:focus~label,
+.form-style-1.border-form .login-box .user-box input:valid~label {
+    top: -35px;
+    font-size: 1rem;
+    color: var(--white-color);
+}
+
+.form-style-1.border-form .login-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 42px;
+    height: 42px;
+    background: url('https://www.tubeengineai.com/app/assets/images/form-before.png');
+    background-size: 100% 100%;
+}
+
+/* form-style-1 border-form */
+/* =========================== Border Form Style End ==================================== */
+
+/* =========================== Border Form 2 Style Start ==================================== */
+/* form-style-1 .border-form border-form-2 */
+
+
+.form-style-1.border-form.border-form-2 .login-box {
+    border: 1px solid var(--theme-br3);
+    padding: 30px;
+    border-radius: 20px;
+    border-top: transparent;
+    border-bottom: transparent;
+}
+
+.form-style-1.border-form.border-form-2 .login-box input {
+    background: transparent;
+    border-left: 0;
+    border-bottom: 1px solid var(--theme-br3);
+}
+
+.form-style-1.border-form.border-form-2 .login-box label {
+    left: 0;
+}
+
+.form-style-1.border-form.border-form-2 .login-box::before {
+    display: none;
+}
+
+/* form-style-1 .border-form border-form-2 */
+/* =========================== Border Form 2 Style End ==================================== */
+
+
+
+/* =========================== Dark Form Center Style End ==================================== */
+/* form-style-1 dark dark-form-center */
+.form-style-1.dark.dark-form-center {
+    background: transparent;
+    --theme-bg: #000;
+    --white-color: #fff;
+    --theme-br3: rgba(255, 255, 255, 0.15);
+}
+
+.form-style-1.dark.dark-form-center .btn {
+    background: #0D1216;
+    color: var(--white-color);
+}
+
+.form-style-1.dark.dark-form-center .btn:hover {
+    background: #ffffff;
+    color: var(--black-color);
+    box-shadow: 0 0 5px var(--white-color), 0 0 25px var(--white-color), 0 0 50px var(--white-color), 0 0 100px var(--white-color);
+}
+
+.form-style-1.dark.dark-form-center .login-box .user-box input:focus~label,
+.form-style-1.dark.dark-form-center .login-box .user-box input:valid~label {
+    color: var(--white-color);
+}
+
+.form-style-1.dark.dark-form-center .submit-btn-side {
+    text-align: center !important;
+}
+
+.form-style-1.dark.dark-form-center .login-box {
+    box-shadow: none;
+    background: #1E1E1E;
+}
+
+
+/* form-style-1 dark dark-form-center */
+/* =========================== Dark Form Center Style End ==================================== */
+
+
+
+
+/* =========================== Response Style Start ==================================== */
+/* form-style-1 form-response*/
+
+.form-style-1.form-response .login-box {
+    padding: 0;
+    border: 0;
+}
+
+.form-style-1.form-response .content-inner {
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(113, 72, 226, 0.20);
+}
+
+.form-style-1.form-response h4 {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: var(--white-color);
+}
+
+.form-style-1.form-response p {
+    color: var(--theme-color);
+    line-height: 22px;
+}
+
+@media (min-width: 1200px) {
+
+    /*  .form-style-1.form-response .login-box{
+                            min-width: 80%;
+                            max-width: 700px;
+                        } */
+    .form-style-1.form-response .submit-btn-side {
+        margin-top: 30px;
+    }
+}
+
+
+.form-style-1.form-response.border-form .login-box {
+    padding: 30px;
+    border: 1px solid var(--theme-br3);
+}
+
+.form-style-1.form-response.border-form .login-box .content-inner {
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-radius: 0;
+}
+
+.form-style-1.form-response.border-form.border-form-2 .login-box {
+    border-top: 0;
+    border-bottom: 0;
+    border-width: 2px;
+}
+
+.form-style-1.form-response.border-form.border-form-2 .login-box .content-inner {
+    border: 1px solid var(--theme-br3);
+    border-radius: 10px;
+}
+
+.form-style-1.form-response.dark.dark-form-center .login-box {
+    padding: 20px 10px;
+}
+
+.form-style-1.form-response.dark.dark-form-center h4 {
+    color: var(--white-color);
+}
+
+/* form-style-1 form-response*/
+/* =========================== Response Style Start ==================================== */
+.all-forms {
+    padding: 120px 0;
+    border-bottom: 1px solid var(--theme-br3);
+}
+
+.user-box .question {
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+}
+
+.text-gray {
+    color: var(--theme-color) !important;
+}
+
+.radio-wrapper input[type=radio] {
+    display: none;
+    appearance: none;
+}
+
+.radio-wrapper input[type=radio]+label:before {
+    content: "";
+    background: #f4f4f4;
+    border-radius: 100%;
+    border: 1px solid #b4b4b4;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    position: relative;
+    top: -0.1em;
+    margin-right: .6em;
+    vertical-align: middle;
+    cursor: pointer;
+    text-align: center;
+    transition: all 250ms ease;
+    opacity: 1;
+}
+
+.radio-wrapper input[type=radio]:checked+label:before {
+    background-color: #7148E2;
+    box-shadow: inset 0 0 0 4px #f4f4f4;
+}
+
+.radio-wrapper input[type=radio]:focus+label:before {
+    outline: none;
+    border-color: #7148E2;
+}
+
+.radio-wrapper input[type=radio]:disabled+label:before {
+    box-shadow: inset 0 0 0 4px #f4f4f4;
+    border-color: #b4b4b4;
+    background: #b4b4b4;
+}
+
+.wrapper-parent {
+    display: flex;
+    align-items: center;
+    gap: 20px 40px;
+    flex-wrap: wrap
+}
+
+.radio-wrapper input[type=radio]+label:empty:before {
+    margin-right: 0;
+}
+
+.checkbox-wrapper-4 {
+    position: relative;
+}
+
+.checkbox-wrapper-4 * {
+    box-sizing: border-box;
+}
+
+.checkbox-wrapper-4 .cbx {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    display: inline-block;
+
+}
+
+.checkbox-wrapper-4 .cbx:not(:last-child) {
+    margin-right: 6px;
+}
+
+.checkbox-wrapper-4 .cbx span {
+    float: left;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-4 .cbx span:first-child {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    transform: scale(1);
+    border: 1px solid #cccfdb;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 1px rgba(0, 16, 75, 0.05);
+}
+
+.checkbox-wrapper-4 .cbx span:first-child svg {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-4 .cbx span:last-child {
+    padding-left: 8px;
+    line-height: 18px;
+}
+
+.checkbox-wrapper-4 .cbx:hover span:first-child {
+    border-color: #7148E2;
+}
+
+.checkbox-wrapper-4 .inp-cbx {
+    position: absolute;
+    visibility: hidden;
+}
+
+.checkbox-wrapper-4 .inp-cbx:checked+.cbx span:first-child {
+    background: #7148E2;
+    border-color: #7148E2;
+    animation: wave-4 0.4s ease;
+}
+
+.checkbox-wrapper-4 .inp-cbx:checked+.cbx span:first-child svg {
+    stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-4 .inline-svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+@media screen and (max-width: 640px) {
+    .checkbox-wrapper-4 .cbx {
+        width: 100%;
+        display: inline-block;
+    }
+}
+
+@-moz-keyframes wave-4 {
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+@-webkit-keyframes wave-4 {
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+@-o-keyframes wave-4 {
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+@keyframes wave-4 {
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+.form-site {
+    padding: 50px 20px !important;
+}

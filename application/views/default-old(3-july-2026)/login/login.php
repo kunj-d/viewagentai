@@ -1,0 +1,610 @@
+<?php
+$assetsFolder = $this->config->item('assetsTemplatePath');
+?>
+<style>
+    :root {
+        --primary-color: #5055BE;
+        --primary-color2: #25297E;
+        --primary-color3: #FF5858;
+        --primary-color4: #ec4242;
+        --secondary-color: #FDDB8A;
+        --secondary-color2: #CDD4ED;
+        --secondary-color3: #8B93B1;
+        --tertiary-color: #F5F6FA;
+        --text-primary: #1C295D;
+        --hover-color: #ffffff;
+        --white-color: #ffffff;
+        --black-color: #000000;
+        --blue-gradient: radial-gradient(100% 100% at 50.00% 0%, #AA70ED 0%, #5340D7 100%);
+        --blue-gradient1: radial-gradient(100% 100% at 50.00% 0%, #5340D7 0%, #AA70ED 100%);
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: var(--text-primary);
+    }
+
+    img.center-img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    a,
+    a:hover {
+        text-decoration: none;
+        color: var(--primary-color);
+    }
+
+    .w600 {
+        font-weight: 600;
+    }
+
+    .auth-section {
+        background: var(--white-color);
+        width: 100%;
+        max-width: 415px;
+    }
+
+    .heading {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: var(--white-color);
+    }
+
+    .sub-heading {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        text-align: center;
+    }
+
+    .login-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0px;
+        flex-direction: column;
+    }
+
+    a.google-login-btn {
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        padding: 9px 5px;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 500;
+        text-decoration: none;
+        gap: 15px;
+        width: 100%;
+        color: var(--text-primary);
+    }
+
+    a.google-login-btn img {
+        height: 22px;
+    }
+
+    .line-for {
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--secondary-color3);
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .line-for::before {
+        border-top: 1px solid var(--secondary-color2);
+        content: "";
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .line-for span {
+        display: inline-block;
+        background-color: var(--white-color);
+        padding: 0 15px;
+    }
+
+    /*******Form CSS*******/
+    *,
+    *:focus {
+        outline: none
+    }
+
+    .form-item {
+        position: relative;
+        margin-bottom: 20px
+    }
+
+    .form-item input {
+        display: block;
+        width: 100%;
+        height: 40px;
+        background: var(--white-color) !important;
+        border: solid 1px #D1CFCF;
+        transition: all .3s ease;
+        padding: 0 15px;
+        border-radius: 5px;
+        color: var(--text-primary);
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .form-item input:focus {
+        border-color: #D1CFCF;
+    }
+
+    .mt10 {
+        margin-top: 10px;
+    }
+
+    .mt15 {
+        margin-top: 15px;
+    }
+
+    .mb2 {
+        margin-bottom: 20px;
+    }
+
+    .mt2 {
+        margin-top: 20px;
+    }
+
+    .mt3 {
+        margin-top: 30px;
+    }
+
+    .forgot-link.forgot-link.forgot-link.forgot-link.forgot-link.forgot-link.forgot-link.forgot-link {
+        font-weight: 500;
+        font-size: 14px;
+        color: #00121A;
+    }
+
+    .capcha-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .btn-wrapper a {
+        background: var(--primary-color);
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 14px;
+        color: var(--white-color);
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 40px;
+        text-decoration: none;
+    }
+
+    .hr-line {
+        border-bottom: 2px solid var(--secondary-color2);
+    }
+
+    .signup {
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--secondary-color3);
+        text-align: center;
+    }
+
+    .signbtn,
+    .signbtn:focus {
+        display: inline-block;
+        background: var(--primary-color);
+        border-radius: 6px;
+        text-align: center;
+        padding: 12px 25px;
+        color: var(--text-primary);
+        margin: auto;
+        border: 0;
+        font-weight: 600;
+        font-size: 14px;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    /* .signbtn:hover {
+        background: var(--primary-color);
+        color: var(--text-primary);
+    } */
+    .btn-wrapper-login {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .btn-wrapper-login {
+        display: flex;
+        align-items: center;
+    }
+
+    a.forgot-link {
+        font-size: 14px;
+        text-decoration: none;
+        white-space: nowrap;
+        font-weight: 500;
+        color: #00121A !important;
+    }
+
+    .dark {
+        color: var(--text-primary);
+    }
+
+    a.dark:hover {
+        color: var(--text-primary);
+    }
+
+    .form-control-feedback {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        display: block;
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        pointer-events: none;
+    }
+
+    .form-control-feedback {
+        top: 12px;
+        right: 20px;
+        color: var(--secondary-color2);
+        font-size: 13px;
+        cursor: pointer;
+        pointer-events: fill;
+        z-index: 100;
+        width: auto;
+        height: auto;
+        line-height: normal;
+    }
+
+    .form-control-feedback i {
+        font-size: 16px;
+    }
+
+    .login-body {
+        height: 100vh;
+    }
+
+    @media (min-width:768px) {
+        .heading {
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        .login-wrapper {
+            flex-direction: row;
+            gap: 20px;
+        }
+    }
+
+    /*.gradinet{*/
+    /*     border-radius: 20px;*/
+    /*    border-image: linear-gradient(#DCD3FF 80%, #FFFFFF 0%) 0.1;*/
+    /*    border-width: 1px;*/
+    /*    border-style: solid;*/
+    /*}*/
+    .form-content {
+        border-bottom: 0px !important;
+        border-radius: 20px;
+        border-image: linear-gradient(#DCD3FF 80%, #FFFFFF 0%) 0.1;
+        border-width: 1px;
+        border-style: solid;
+        background: linear-gradient(180deg, rgba(163, 126, 227, 0.80) 1.77%, rgba(83, 67, 189, 0.00) 80.77%);
+        backdrop-filter: blur(15px);
+        padding-bottom: 20px;
+        position: relative;
+    }
+
+    .form-content::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        padding: 1px;
+        border-radius: 1rem;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.3));
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+    }
+
+    .form-content .heading {
+        padding: 30px;
+    }
+
+    .form-content h2 {
+        color: #FFF;
+        font-family: Inter;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 28px;
+    }
+
+    @media(min-width:992px) {
+        .form-content h2 {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 34px;
+        }
+    }
+
+    @media(max-width:768px) {
+        .form-content {
+            margin-top: 20px;
+        }
+    }
+
+    .ele1 {
+        animation: 2s ease-in-out 0s infinite alternate none running mover1;
+    }
+
+    @-webkit-keyframes mover1 {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(20px);
+        }
+    }
+
+    @keyframes mover1 {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(20px);
+        }
+    }
+
+    .sky-blue {
+        color: #01dffb;
+    }
+
+    .caveat {
+        font-family: 'Caveat', cursive;
+    }
+
+    .auth-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .sitelogo {
+        width: 260px;
+    }
+
+    .testimonails-card {
+        padding: 20px;
+        background: #0101018f;
+        border-radius: 10px;
+        color: var(--text-primary);
+    }
+
+    .testimonails-card p {
+        color: var(--text-primary);
+    }
+
+    .testimonails-card .user-detail {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .user-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid var(--text-primary);
+    }
+
+    .user-detail h6 {
+        font-size: 1rem;
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+
+    .user-detail p {
+        margin: 0;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .swiper-pagination {
+        position: static !important;
+        margin: auto;
+        width: 100% !important;
+        transform: none !important;
+        margin-top: 20px;
+    }
+
+    .swiper-pagination .swiper-pagination-bullet {
+        background: var(--theme-bg) !important;
+    }
+
+    .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background: var(--primary-color) !important;
+    }
+
+    .info {
+        max-height: 150px;
+        overflow-y: auto;
+    }
+
+    .info::-webkit-scrollbar {
+        display: none;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="<?= $this->config->item('assetsPath') ?>images/Ai-Employee-Favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <title><?php echo $this->config->item('productName'); ?> - Optimize YouTube Videos For AI Search Visibility</title>
+    <meta name="description"
+        content="Optimize your YouTube videos for AI search engines like ChatGPT, Gemini, Claude & Grok. Analyze, improve and increase your AI discoverability with Visora AI.">
+    <link rel="canonical" href="https://www.getvisoraai.com/login" />
+    <meta property="og:title" content="<?php echo $this->config->item('productName'); ?> - Optimize YouTube Videos For AI Search Visibility" />
+    <meta property="og:url" content="https://www.getvisoraai.com/login" />
+    <meta property="og:type" content="App" />
+    <meta property="og:site_name" content="visoraai" />
+    <meta property="og:description"
+        content="Optimize your YouTube videos for AI search engines like ChatGPT, Gemini, Claude & Grok. Analyze, improve and increase your AI discoverability with Visora AI." />
+    <meta property="og:image" content="<?= $this->config->item('assetsPath') ?>assets/images/meta-banner.png" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@visoraai" />
+    <meta name="twitter:title" content="<?php echo $this->config->item('productName'); ?> - Optimize YouTube Videos For AI Search Visibility" />
+    <meta name="twitter:description"
+        content="Optimize your YouTube videos for AI search engines like ChatGPT, Gemini, Claude & Grok. Analyze, improve and increase your AI discoverability with Visora AI." />
+    <meta name="twitter:image" content="<?= $this->config->item('assetsPath') ?>assets/images/meta-banner.png" />
+    <?php
+    $this->load->view('default/login/login-header.php');
+    ?>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body class="h-100">
+    <div class="auth-wrapper">
+        <div class="container-fluid h-100 p-0">
+            <div class="row m-0 h-100 align-items-center justify-content-center">
+                <div class="col-lg-6 text-center h-100 d-flex align-items-center justify-content-center flex-column position-relative overflow-hidden z-1">
+                    <div class="auth-section">
+                        <div class="logo-media mx-auto">
+                            <img src="<?= $this->config->item('assetsPath') ?>default/images/login-logo.png" class="img-fluid mx-auto d-block">
+                        </div>
+                        <div class="heading">Welcome To <span class="text-primary">Visora AI</span></div>
+                        <div class="sub-heading sub-heading-border">Log in to continue your account</div>
+                        <form action="<?php echo $this->config->item('base_url'); ?>login" method="post"
+                            class="form_ajax">
+                            <div class="form">
+                                <div class="form-item text-start">
+                                    <div class="label-items">
+                                        <label class="form-label">Enter Email</label>
+                                    </div>
+                                    <div class="form-item-in">
+                                        <div class="input-icon">
+                                            <i class="fa-solid fa-envelope"></i>
+                                        </div>
+                                        <input type="email" id="username" placeholder="Enter Your Email" value="" name="email"
+                                            autocomplete="off" class='form-control '>
+                                    </div>
+                                </div>
+
+                                <div class="form-item mb0 text-start">
+                                    <div class="label-items">
+                                        <label class="form-label flex-1">Enter Password</label>
+                                        <a tabindex="-1" href="<?= base_url('forgot-password'); ?>" class="forgot-link">Forgot Password ?</a>
+                                    </div>
+                                    <div class="form-item-in mb-2">
+                                        <div class="input-icon">
+                                            <i class="fa-solid fa-lock"></i>
+                                        </div>
+                                        <input type="password" name="password" placeholder="Enter Your Password" value=""
+                                            id="password-field" autocomplete="off" class='form-control '>
+                                        <span class="form-control-feedback toggle-password" toggle="#password-field"><i class="icon-password-view"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <!--<div class="g-recaptcha" data-sitekey="6LePl6cpAAAAAG-zpNyt83OdXkjYMjLJFM2LOOIe">
+                                    </div>-->
+                                <div class="btn-wrapper-login mt30">
+                                    <button type="submit" name="login" class="signbtn btn-block">Log
+                                        In</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-flex align-items-center h-100">
+                    <div class="user-section-card d-flex flex-column gap-2 justify-content-between">
+                        <div class="top-content">
+                            <h3 class="sub-title">
+                                FROM YOUTUBE VIDEOS TO
+                            </h3>
+                            <h3 class="main-title">
+                                AI Search Discovery Everywhere
+                            </h3>
+                            <p class="description mb-0">
+                                <span>Analyze. Optimize. Grow Automatically.</span>
+                            </p>
+                        </div>
+                        <div class="bottom-content w-100 overflow-hidden">
+                            <div class="media-img">
+                                <img src="<?= $this->config->item('assetsPath') ?>default/images/login-pr-thumb.png" class="img-fluid mx-auto d-block">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+
+            $(".toggle-password").click(function() {
+                var input = $($(this).attr("toggle"));
+                if (input.attr("type") == "password") {
+                    input.attr("type", "text");
+                } else {
+                    input.attr("type", "password");
+                }
+
+                $("i", this).toggleClass("icon-password-hide-show icon-password-hide");
+            });
+            $(".toggle-password1").click(function() {
+                var input = $($(this).attr("toggle"));
+                if (input.attr("type") == "password") {
+                    input.attr("type", "text");
+                } else {
+                    input.attr("type", "password");
+                }
+
+                $("i", this).toggleClass("icon-password-hide-show icon-password-hide");
+            });
+        });
+    </script>
+</body>
+
+</html>
